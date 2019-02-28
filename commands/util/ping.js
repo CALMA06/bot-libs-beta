@@ -14,6 +14,6 @@ module.exports = class PingCommand extends Command {
     async exec(msg) {
         const pingMsg = await msg.channel.send('Hello?');
     
-        return pingMsg.edit(`${msg.member.user.tag}, your ping is ${pingMsg.createdTimestamp - msg.createdTimestamp}ms.`);
+        return pingMsg.edit(`${msg.author.tag}, your ping is ${pingMsg.createdTimestamp - msg.createdTimestamp}ms.`);
     }
 };
