@@ -30,8 +30,7 @@ class BotClient extends AkairoClient {
         this.commandHandler.useListenerHandler(this.listenerHandler);
 
         this.listenerHandler.setEmitters({
-            commandHandler: this.commandHandler,
-            listenerHandler: this.listenerHandler
+            commandHandler: this.commandHandler
         });
 
         this.commandHandler.loadAll();
