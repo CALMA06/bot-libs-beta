@@ -5,7 +5,7 @@ module.exports = class PingCommand extends Command {
     constructor() {
         super('ping', {
             aliases: ['ping'],
-            category: 'util',
+            clientPermissions: ['SEND_MESSAGES'],
             description: oneLine`This command measures (in milliseconds) how long it takes the bot to receive your
             message and respond back to it.`
         });
