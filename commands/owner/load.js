@@ -34,7 +34,7 @@ module.exports = class LoadCommand extends Command {
         }
 
         return failureMsg === '' 
-            ? msg.channel.send(`${msg.author}, the ${handler.modules.get(filepathSplit[2]).constructor.name} module has been loaded.`) 
+            ? msg.channel.send(`${msg.author}, the ${handler.modules.get(filepathSplit[2].toLowerCase()).constructor.name} module has been loaded.`) 
             : msg.channel.send(failureMsg);
     }
 };
